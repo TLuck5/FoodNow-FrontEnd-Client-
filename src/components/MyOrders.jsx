@@ -7,7 +7,7 @@ const MyOrders = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.post("http://localhost:5000/api/myOrders", { email: localStorage.getItem("userEmail") });
+            const response = await axios.post("https://foodnow-backend.onrender.com/api/myOrders", { email: localStorage.getItem("userEmail") });
             setOrders(response.data);
             setLoading(false);
         } catch (error) {

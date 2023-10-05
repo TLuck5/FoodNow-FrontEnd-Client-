@@ -20,7 +20,7 @@ export default function Login() {
         }
 
         try {
-            const response = await axios.post('http://localhost:5000/api/login', userData);
+            const response = await axios.post('https://foodnow-backend.onrender.com/api/login', userData);
 
             if (response.data.success) {
                 localStorage.setItem('authToken', response.data.authToken);

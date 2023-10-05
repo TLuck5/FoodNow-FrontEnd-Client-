@@ -12,7 +12,7 @@ function Home() {
 
     const loadData = async () => {
         try {
-            const response = await axios.post("http://localhost:5000/api/fooditems");
+            const response = await axios.post("https://foodnow-backend.onrender.com/api/fooditems");
             setData(response.data[0]);
             setCatData(response.data[1]);
         } catch (error) {

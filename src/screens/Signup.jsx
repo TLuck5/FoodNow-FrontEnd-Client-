@@ -27,7 +27,7 @@ export default function Signup() {
 
         try {
 
-            const response = await axios.post("http://localhost:5000/api/createuser", userData);
+            const response = await axios.post("https://foodnow-backend.onrender.com/api/createuser", userData);
             if (response.data.success) {
                 alert("User created")
                 navigate("/login")

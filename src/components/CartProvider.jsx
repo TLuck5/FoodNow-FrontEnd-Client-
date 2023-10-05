@@ -51,7 +51,7 @@ export const CartProvider = ({ children }) => {
     );
 };
 
-// Create custom hooks to access the context values
+
 export const useCart = () => {
     const context = useContext(cartState);
     if (context === undefined) {

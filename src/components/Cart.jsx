@@ -14,7 +14,7 @@ export default function Cart({ setShowCart, toggleCart }) {
             return;
         }
 
-        const response = await axios.post("http://localhost:5000/api/orderData", { order_data: data, email: localStorage.getItem("userEmail"), order_date: new Date().toDateString() })
+        const response = await axios.post("https://foodnow-backend.onrender.com/api/orderData", { order_data: data, email: localStorage.getItem("userEmail"), order_date: new Date().toDateString() })
 
         if (response.status == 200) {
             dispatch({ type: "DROP" })
